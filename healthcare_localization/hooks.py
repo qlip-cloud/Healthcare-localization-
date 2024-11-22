@@ -36,6 +36,11 @@ app_license = "MIT"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+doctype_js = {
+    "Sales Invoice" : "public/js/sales_invoice.js",
+	"Company" : "public/js/company.js"
+}
+
 # Home Pages
 # ----------
 
@@ -172,4 +177,8 @@ user_data_fields = [
 # auth_hooks = [
 # 	"healthcare_localization.auth.validate"
 # ]
+
+fixtures = [
+    {"doctype": "qp_HCO_Operator"}
+]
 

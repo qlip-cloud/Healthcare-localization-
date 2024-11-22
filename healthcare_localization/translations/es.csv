@@ -1,29 +1,41 @@
-User Type, Tipo de Usuario
-Residential Area, Zona Residencia
-Inability, Incapacidad
-Responsible, Responsable
-Responsible Kinship, Parentesco Responsable
-Responsible Phone, Teléfono Responsable
-Companion, Acompañante
-Companion Kinship, Parentesco Acompañante
-Companion Phone, Teléfono Acompañante
-Companion Email, Email Acompañante
-History, Historia
-Family History, Historia Familiar
-Evolution, Evolución
-Treatment, Tratamiento
-Entry Route, Via de ingreso al sector salud
-Healthcare Localization, Localización Salud
-RIPS supplementary data, Datos complementarios RIPS
-Service Code, Código de Servicio
-Services Group, Grupo de Servicios
-Cause That Motivates Attention, Causa que motiva la atención
-Technology in Health, Tecnología en Salud
-Mode, Modalidad
-Purpose of Health Technology, Finalidad de tecnología en salud
-Type of Medication, Tipo de Medicamento
-Pharmaceutical Form, Forma Farmaceutica
-Minimum Dispensing Unit, Unidad mínima de dispensación
-Noun, Nombre
-Board, Tabla
-Provider Code, Código Prestador
+User Type,Tipo de Usuario
+Residential Area,Zona Residencia
+Inability,Incapacidad
+Responsible,Responsable
+Responsible Kinship,Parentesco Responsable
+Responsible Phone,Teléfono Responsable
+Companion,Acompañante
+Companion Kinship,Parentesco Acompañante
+Companion Phone,Teléfono Acompañante
+Companion Email,Email Acompañante
+History,Historia
+Family History,Historia Familiar
+Evolution,Evolución
+Treatment,Tratamiento
+Entry Route,Via de ingreso al sector salud
+Healthcare Localization,Localización Salud
+RIPS supplementary data,Datos complementarios RIPS
+Service Code,Código de Servicio
+Services Group,Grupo de Servicios
+Cause That Motivates Attention,Causa que motiva la atención
+Technology in Health,Tecnología en Salud
+Mode,Modalidad
+Purpose of Health Technology,Finalidad de tecnología en salud
+Type of Medication,Tipo de Medicamento
+Pharmaceutical Form,Forma Farmaceutica
+Minimum Dispensing Unit,Unidad mínima de dispensación
+Noun,Nombre
+Board,Tabla
+Provider Code,Código Prestador
+Contract,Contrato
+RIPS Invoice,Factura RIPS
+Validated by the Ministry of Health,Validada por el Ministerio de Salud
+Validate RIPS,Validar RIPS
+This action sends a validation request to the Ministry of Health. Are you sure?,Esta acción envía solicitud de validdación al ministerio de salud. ¿Desea continuar?
+Register Environment,Registrar Entorno
+Associate Environment,Asociar Ambiente
+Let's Set Up the Healthcare Localization Module.,Configuremos el módulo de localización de atención médica.
+The Healthcare Localization Module is all set up!,¡El módulo de localización sanitaria está listo!
+"Environment, settings, masters and more","Entorno, configuraciones, maestros y más"
+Select the connection type to generate the RIPS.,Seleccione el tipo de conexión para generar el RIPS.
+You must indicate the code of the provider associated with the company.,Debe indicar el código del prestador asociado a la compañía.
