@@ -38,7 +38,8 @@ app_license = "MIT"
 
 doctype_js = {
     "Sales Invoice" : "public/js/sales_invoice.js",
-	"Company" : "public/js/company.js"
+	"Company" : "public/js/company.js",
+	"Patient" : "public/js/patient.js"
 }
 
 # Home Pages
@@ -101,6 +102,14 @@ doctype_js = {
 # 		"on_trash": "method"
 #	}
 # }
+
+doc_events = {
+
+    "Gender": {
+        "validate": ["healthcare_localization.healthcare_localization.uses_cases.gender.validation.handle"]
+    }
+}
+
 
 # Scheduled Tasks
 # ---------------
@@ -179,6 +188,15 @@ user_data_fields = [
 # ]
 
 fixtures = [
-    {"doctype": "qp_HCO_Operator"}
+    {"doctype": "qp_HCO_Operator"},
+	{"doctype": "Gender", "filters": [
+        [
+            "name", "in", [
+                "Hombre",
+                "Mujer",
+				"Indeterminado o Intersexual"
+            ]
+        ]
+    ]}
 ]
 

@@ -39,3 +39,5 @@ The Healthcare Localization Module is all set up!,¡El módulo de localización 
 "Environment, settings, masters and more","Entorno, configuraciones, maestros y más"
 Select the connection type to generate the RIPS.,Seleccione el tipo de conexión para generar el RIPS.
 You must indicate the code of the provider associated with the company.,Debe indicar el código del prestador asociado a la compañía.
+Related diagnosis,Diagnóstico relacionado
+Code {0} is already used in {1},"El código {0} ya se utiliza en {1}"
