@@ -36,6 +36,12 @@ app_license = "MIT"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+doctype_js = {
+    "Sales Invoice" : "public/js/sales_invoice.js",
+	"Company" : "public/js/company.js",
+	"Patient" : "public/js/patient.js"
+}
+
 # Home Pages
 # ----------
 
@@ -96,6 +102,14 @@ app_license = "MIT"
 # 		"on_trash": "method"
 #	}
 # }
+
+doc_events = {
+
+    "Gender": {
+        "validate": ["healthcare_localization.healthcare_localization.uses_cases.gender.validation.handle"]
+    }
+}
+
 
 # Scheduled Tasks
 # ---------------
@@ -172,4 +186,18 @@ user_data_fields = [
 # auth_hooks = [
 # 	"healthcare_localization.auth.validate"
 # ]
+
+fixtures = [
+    {"doctype": "qp_HCO_Operator"},
+	{"doctype": "qp_HCO_TerritorialZone"},
+	{"doctype": "Gender", "filters": [
+        [
+            "name", "in", [
+                "Hombre",
+                "Mujer",
+				"Indeterminado o Intersexual"
+            ]
+        ]
+    ]}
+]
 

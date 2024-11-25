@@ -48,7 +48,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-11 14:59:33.294192",
+ "modified": "2024-11-22 10:40:48.873402",
  "modified_by": "Administrator",
  "module": "Healthcare Localization",
  "name": "qp_HCO_EntryRoute",
@@ -126,7 +126,7 @@
  ],
  "restrict_to_domain": "Healthcare",
  "search_fields": "noun",
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "name",
+ "sort_order": "ASC",
  "track_changes": 1
 }

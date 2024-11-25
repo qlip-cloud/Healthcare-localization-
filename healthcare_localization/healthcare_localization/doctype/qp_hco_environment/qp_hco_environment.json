@@ -1,16 +1,19 @@
 {
  "actions": [],
  "autoname": "field:code",
- "creation": "2024-10-11 15:00:33.720759",
+ "creation": "2024-10-21 14:45:12.206160",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "code",
-  "noun",
-  "description",
-  "enabled",
-  "board"
+  "operator_code",
+  "operator_name",
+  "enviroment_type",
+  "url",
+  "email",
+  "user",
+  "password"
  ],
  "fields": [
   {
@@ -22,36 +25,56 @@
    "unique": 1
   },
   {
-   "fieldname": "noun",
-   "fieldtype": "Data",
+   "fieldname": "operator_code",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Noun",
-   "reqd": 1,
-   "search_index": 1
+   "label": "Operator Code",
+   "options": "qp_HCO_Operator",
+   "reqd": 1
   },
   {
-   "fieldname": "description",
+   "fetch_from": "operator_code.operator_name",
+   "fieldname": "operator_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Operator Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enviroment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Enviroment Type",
+   "options": "Producci\u00f3n\nPruebas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "url",
    "fieldtype": "Data",
-   "label": "Description"
+   "label": "Url",
+   "reqd": 1
   },
   {
-   "default": "1",
-   "fieldname": "enabled",
-   "fieldtype": "Check",
-   "label": "Enabled"
-  },
-  {
-   "fieldname": "board",
+   "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Board"
+   "label": "Email"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "label": "User"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-22 10:42:01.550360",
+ "modified": "2024-10-21 14:51:20.670090",
  "modified_by": "Administrator",
  "module": "Healthcare Localization",
- "name": "qp_HCO_CauseThatMotivatesAttention",
+ "name": "qp_HCO_Environment",
  "owner": "Administrator",
  "permissions": [
   {
@@ -125,8 +148,8 @@
   }
  ],
  "restrict_to_domain": "Healthcare",
- "search_fields": "noun",
- "sort_field": "name",
- "sort_order": "ASC",
+ "search_fields": "operator_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
  "track_changes": 1
 }
