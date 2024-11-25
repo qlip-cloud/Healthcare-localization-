@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "field:code",
- "creation": "2024-10-11 15:00:33.720759",
+ "creation": "2024-11-25 09:11:15.415913",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -48,10 +48,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-22 10:42:01.550360",
+ "modified": "2024-11-25 09:11:15.415913",
  "modified_by": "Administrator",
  "module": "Healthcare Localization",
- "name": "qp_HCO_CauseThatMotivatesAttention",
+ "name": "qp_HCO_TerritorialZone",
  "owner": "Administrator",
  "permissions": [
   {
