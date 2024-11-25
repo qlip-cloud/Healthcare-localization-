@@ -189,6 +189,7 @@ user_data_fields = [
 
 fixtures = [
     {"doctype": "qp_HCO_Operator"},
+	{"doctype": "qp_HCO_TerritorialZone"},
 	{"doctype": "Gender", "filters": [
         [
             "name", "in", [

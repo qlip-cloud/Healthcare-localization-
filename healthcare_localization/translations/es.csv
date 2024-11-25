@@ -1,5 +1,5 @@
 User Type,Tipo de Usuario
-Residential Area,Zona Residencia
+Territorial Zone,Zona Territorial
 Inability,Incapacidad
 Responsible,Responsable
 Responsible Kinship,Parentesco Responsable
@@ -41,3 +41,4 @@ Select the connection type to generate the RIPS.,Seleccione el tipo de conexión
 You must indicate the code of the provider associated with the company.,Debe indicar el código del prestador asociado a la compañía.
 Related diagnosis,Diagnóstico relacionado
 Code {0} is already used in {1},"El código {0} ya se utiliza en {1}"
+Health Document Type,Tipo Documento Salud
