@@ -9,7 +9,10 @@ frappe.ui.form.on("Sales Invoice", "refresh", function(frm) {
                         si_doc: frm.doc.name
                     },
                     freeze: true,
-                    callback: () => {
+                    callback: (r) => {
+                        if (r.message) {
+                            frappe.msgprint(r.message.msg);
+                        }
                         frm.refresh();
                     }
                 });

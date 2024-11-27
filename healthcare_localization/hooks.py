@@ -188,16 +188,27 @@ user_data_fields = [
 # ]
 
 fixtures = [
-    {"doctype": "qp_HCO_Operator"},
+	{"doctype": "qp_HCO_Operator"},
 	{"doctype": "qp_HCO_TerritorialZone"},
 	{"doctype": "Gender", "filters": [
-        [
-            "name", "in", [
-                "Hombre",
-                "Mujer",
+		[
+			"name", "in", [
+				"Hombre",
+				"Mujer",
 				"Indeterminado o Intersexual"
-            ]
-        ]
-    ]}
+			]
+		]
+	]},
+	{"doctype": "Translation", "filters": [
+		[
+			"source_text", "in", [
+				"This action sends a validation request to the Ministry of Health. Are you sure?",
+				"Validate RIPS"
+			]
+		],
+		[
+			"language", "=", "es-CO"
+		]
+	]}
 ]
 
