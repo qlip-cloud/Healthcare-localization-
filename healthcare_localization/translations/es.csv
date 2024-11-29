@@ -51,3 +51,5 @@ ISO numeric code in Country not found,Código numérico ISO del País no encontr
 Patient in Sales Invoice not found,Paciente en Factura de Ventas no encontrado
 Tax ID in Customer not found,No se encontró el ID fiscal del cliente
 Code in Gender not found,Código en género no encontrado
+Patient Relation,Relación del Paciente,
+ISO alpha-3 Code,Código alpha-3 ISO
