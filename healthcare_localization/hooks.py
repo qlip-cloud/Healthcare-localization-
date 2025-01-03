@@ -91,6 +91,10 @@ doctype_js = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
+override_doctype_class = {
+	'Patient': 'healthcare_localization.healthcare_localization.override.patient.HealthcarePatient'
+}
+
 # Document Events
 # ---------------
 # Hook on document methods and events

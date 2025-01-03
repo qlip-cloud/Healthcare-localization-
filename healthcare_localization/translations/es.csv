@@ -53,3 +53,8 @@ Tax ID in Customer not found,No se encontró el ID fiscal del cliente
 Code in Gender not found,Código en género no encontrado
 Patient Relation,Relación del Paciente,
 ISO alpha-3 Code,Código alpha-3 ISO
+Residence Municipality,Municipio de Residencia
+Residence Country,País de Residencia
+Birth Country,País de Origen
+ISO numeric code in Residence Country not found,Código ISO en País de Residencia no encontrado
+ISO numeric code in Birth Country not found,Código ISO en País de Origen no encontrado

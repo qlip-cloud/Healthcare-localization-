@@ -100,8 +100,6 @@ def get_transaction_info(sales_invoice):
         # ND nota débito
 
         res["tipoNota"] = "ND" if sales_invoice.is_debit_note else "NC"
-
-        # TODO: determinar si aquí va la factura origen y que iría en numFactura
         res["numNota"] = sales_invoice.return_against
 
     else:
@@ -145,8 +143,13 @@ def get_users_info(si_customer, si_patient, idx):
     if not hco_code:
         sales_invoices_exception.hco_code_gender_exception()
 
-    country_doc = frappe.get_doc("Country", patient_doc.eico_nvben_pais)
-    municipality_party, country_party = __get_data_third_party(tax_id_customer)
+    iso_residence_country = frappe.db.get_value("Country", patient_doc.hco_residence_country, "hco_iso_numeric_code")
+    if not iso_residence_country:
+        sales_invoices_exception.hco_iso_residence_country_exception()
+
+    iso_birth_country = frappe.db.get_value("Country", patient_doc.hco_birth_country, "hco_iso_numeric_code")
+    if not iso_birth_country:
+        sales_invoices_exception.hco_iso_birth_country_exception()
 
     res = {}    
 
@@ -155,20 +158,23 @@ def get_users_info(si_customer, si_patient, idx):
     res["tipoUsuario"] = patient_doc.hco_user_type
     res["fechaNacimiento"] = "{}".format(patient_doc.dob)
     res["codSexo"] = hco_code
-    res["codPaisResidencia"] = country_party
-    res["codMunicipioResidencia"] = municipality_party
+    res["codPaisResidencia"] = iso_residence_country
+    res["codMunicipioResidencia"] = patient_doc.hco_residence_municipality or None
     res["codZonaTerritorialResidencia"] = patient_doc.hco_territorial_zone or None
     res["incapacidad"] = "patient-encounter --> hco_inability"
     res["consecutivo"] = idx
-    res["codPaisOrigen"] = country_doc.hco_iso_numeric_code
+    res["codPaisOrigen"] = iso_birth_country
 
     return res
 
 
 def patient_validation(patient_doc):
 
-    if not patient_doc.eico_nvben_pais:
-        sales_invoices_exception.patient_empty_field_exception("Country")
+    if not patient_doc.hco_residence_country:
+        sales_invoices_exception.patient_empty_field_exception("Residence Country")
+
+    if not patient_doc.hco_birth_country:
+        sales_invoices_exception.patient_empty_field_exception("Birth Country")
 
     if not patient_doc.hco_health_document_type:
         sales_invoices_exception.patient_empty_field_exception("Health Document Type")
@@ -185,22 +191,21 @@ def patient_validation(patient_doc):
     if not patient_doc.sex:
         sales_invoices_exception.patient_empty_field_exception("sex")
 
-    if not patient_doc.hco_territorial_zone:
-        sales_invoices_exception.patient_empty_field_exception("Territorial Zone")
+@frappe.whitelist()
+def get_data_third_party(customer):
 
+    third_party_country = ""
 
-def __get_data_third_party(tax_id):
-    search ={
-        "tax_id": tax_id
-    }
-    third_party = frappe.get_doc('qp_CO_ThirdParty',  search)
+    if customer:
 
-    if not third_party.country:
-        sales_invoices_exception.country_third_party_exception()
+        customer_tax_id = frappe.db.get_value("Customer", customer, "tax_id")
 
-    country_third_party_doc = frappe.get_doc("Country", third_party.country)
+        if customer_tax_id:
 
-    if not country_third_party_doc.hco_iso_numeric_code:
-        sales_invoices_exception.iso_numeric_code_country_exception()
+            search ={
+                "tax_id": customer_tax_id
+            }
 
-    return third_party.municipality or None, country_third_party_doc.hco_iso_numeric_code
+            third_party_country = frappe.db.get_value('qp_CO_ThirdParty', search, "country")
+
+    return {"third_party_country": third_party_country}

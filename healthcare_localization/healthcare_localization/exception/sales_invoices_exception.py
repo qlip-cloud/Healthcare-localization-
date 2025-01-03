@@ -27,3 +27,11 @@ def patient_sales_invoice_exception():
 def patient_empty_field_exception(field_param):
 
 	throw("{} {}".format(_(field_param), _("in Patient not found")))
+
+def hco_iso_residence_country_exception():
+
+	throw(_("ISO numeric code in Residence Country not found"))
+
+def hco_iso_birth_country_exception():
+
+	throw(_("ISO numeric code in Birth Country not found"))

@@ -2,8 +2,9 @@ import frappe
 from frappe import _
 
 def handle(gender, method):
+	meta = frappe.get_meta("Gender")
 
-	if gender.hco_code:
+	if meta.has_field("hco_code") and gender.get("hco_code"):
 		filters = {"hco_code": gender.hco_code, "name": ["!=", gender.name]}
 
 		doctype_with_same_number = frappe.db.get_value("Gender", filters)
