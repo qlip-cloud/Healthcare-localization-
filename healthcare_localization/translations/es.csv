@@ -42,3 +42,19 @@ You must indicate the code of the provider associated with the company.,Debe ind
 Related diagnosis,Diagnóstico relacionado
 Code {0} is already used in {1},"El código {0} ya se utiliza en {1}"
 Health Document Type,Tipo Documento Salud
+The request is not sent...,No se envía la petición...
+There was an error. Check error list,Se ha producido un error. Consultar lista de errores
+Tax ID in Company not found,No se encontró el ID fiscal de la empresa
+ISO Numeric Code,Código Numérico ISO
+Country in third party not found,País en Tercero no encontrado
+ISO numeric code in Country not found,Código numérico ISO del País no encontrado
+Patient in Sales Invoice not found,Paciente en Factura de Ventas no encontrado
+Tax ID in Customer not found,No se encontró el ID fiscal del cliente
+Code in Gender not found,Código en género no encontrado
+Patient Relation,Relación del Paciente,
+ISO alpha-3 Code,Código alpha-3 ISO
+Residence Municipality,Municipio de Residencia
+Residence Country,País de Residencia
+Birth Country,País de Origen
+ISO numeric code in Residence Country not found,Código ISO en País de Residencia no encontrado
+ISO numeric code in Birth Country not found,Código ISO en País de Origen no encontrado
