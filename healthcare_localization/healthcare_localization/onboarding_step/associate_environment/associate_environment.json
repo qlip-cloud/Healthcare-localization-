@@ -1,7 +1,7 @@
 {
  "action": "Show Form Tour",
  "creation": "2024-10-21 15:13:39.876449",
- "description": "# Asociar Ambiente\n\nAsociar ambiente y registrar configuración adicional en la compañía para efectuar el envío de la petición del RIPS.",
+ "description": "# Asociar Ambiente\n\nAsociar ambiente y registrar configuraci\u00f3n adicional en la compa\u00f1\u00eda para efectuar el env\u00edo de la petici\u00f3n del RIPS.",
  "docstatus": 0,
  "doctype": "Onboarding Step",
  "idx": 0,

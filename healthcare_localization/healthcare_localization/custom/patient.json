@@ -1034,7 +1034,7 @@
    "creation": "2024-11-25 10:19:41.072200",
    "default": null,
    "depends_on": null,
-   "description": null,
+   "description": "",
    "docstatus": 0,
    "dt": "Patient",
    "fetch_from": null,
@@ -1263,6 +1263,31 @@
  ],
  "custom_perms": [],
  "doctype": "Patient",
- "property_setters": [],
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2025-01-03 15:54:06.974618",
+   "default_value": null,
+   "doc_type": "Patient",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "dob",
+   "idx": 0,
+   "modified": "2025-01-03 15:54:06.974618",
+   "modified_by": "Administrator",
+   "name": "Patient-dob-reqd",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "reqd",
+   "property_type": "Check",
+   "row_name": null,
+   "value": "1"
+  }
+ ],
  "sync_on_migrate": 1
 }
